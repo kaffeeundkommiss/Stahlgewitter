@@ -1,0 +1,15 @@
+// Quellen der Karte (index.html, Panel „Quellen und Anmerkungen“) und der Seite quellen-karte.html.
+// [Schlüssel, Titel, URL, im Wortlaut geprüft am 10.11.2026 (1/0), Art und Abhängigkeit]
+const SRC = [
+  ["wde", "Wikipedia (de): Ernst Jünger", "https://de.wikipedia.org/wiki/Ernst_J%C3%BCnger", 1, "Sekundärdarstellung; Einzelnachweise teils Jüngers Werke, teils Literatur (Martus, Schwilk, Kiesel)."],
+  ["wdestg", "Wikipedia (de): In Stahlgewittern", "https://de.wikipedia.org/wiki/In_Stahlgewittern", 1, "Sekundärdarstellung; zu den Fassungen gestützt auf die historisch-kritische Ausgabe (Kiesel 2013)."],
+  ["wen", "Wikipedia (en): Storm of Steel", "https://en.wikipedia.org/wiki/Storm_of_Steel", 1, "Gibt den Inhalt des Buchs wieder (Übersetzung Creighton 1929, Einleitung Hofmann 2004); für Daten nicht unabhängig von Jüngers eigener Darstellung."],
+  ["horizon", "horizon14-18.eu: Ernst Jünger (Biografische Notiz, Seitenangaben nach der Pléiade-Ausgabe)", "https://horizon14-18.eu/junger-ernst.html", 1, "Französische Notiz; Autor auf der Seite nicht eindeutig ausgewiesen (vermutlich Frédéric Rousseau, CRID 14-18, 2010; unbestätigt). Stützt sich auf Jüngers Werke."],
+  ["king", "Roads to the Great War: „The Great War Service of Ernst Jünger“, 16.04.2018", "https://roadstothegreatwar-ww1.blogspot.com/2018/04/how-to-get-wounded-14-times-and-win.html", 1, "Blog (Hg. Michael Hanlon), Text nach John King, Dissertation Trinity College Cambridge 1999; nach eigener Angabe mit zwei Regimentsgeschichten abgeglichen."],
+  ["hnet", "David T. Zabecki: „Valor | The Last Blue Max“, HistoryNet, 08.12.2017", "https://historynet.com/valor-last-blue-max/", 1, "Populärer Artikel ohne Einzelnachweise."],
+  ["lemo1", "LeMO (Deutsches Historisches Museum): Ernst Jünger: In Stahlgewittern", "https://www.dhm.de/lemo/kapitel/weimarer-republik/kunst-und-kultur/ernst-juenger-in-stahlgewittern", 1, "Ohne Autor und Datum; Quelle laut Seite Kindlers Neues Literaturlexikon."],
+  ["lemo2", "LeMO (Deutsches Historisches Museum): Biografie Ernst Jünger (Sonja Kock, Janca Imwolde, Stand 14.09.2014)", "https://www.dhm.de/lemo/biografie/ernst-juenger", 1, "Kurzbiografie."],
+  ["scheller", "Wolf Scheller: „Auf dem Weg zur Selbststilisierung. Die Kriegstagebücher 1914–1918 von Ernst Jünger“, Dokumente/Documents 1/2011, S. 77–78", "https://www.dokumente-documents.info/fileadmin/uploads/tx_ewsdokumente/dd-2011-1-artikel-30.pdf", 1, "Rezension der Tagebuchausgabe."],
+  ["perle", "Perlentaucher: Ernst Jünger, Kriegstagebuch 1914–1918 (Verlagsangaben und Rezensionsnotizen)", "https://www.perlentaucher.de/buch/ernst-juenger/kriegstagebuch-1914-1918.html", 1, "Verlagstext und Zusammenfassungen von Rezensionen (FAZ, Zeit, SZ, NZZ, FR, taz); die Rezensionen selbst nicht eingesehen."],
+  ["gut", "Ernst Jünger: In Stahlgewittern. Aus dem Tagebuch eines Stoßtruppführers, 3. Auflage, E. S. Mittler & Sohn, Berlin 1922 (Project Gutenberg Nr. 34099)", "https://www.gutenberg.org/ebooks/34099", 1, "Selbstzeugnis Jüngers. Abrufbar waren nur die Kapitel bis Februar 1916; für spätere Kapitel nur das Inhaltsverzeichnis."]
+];

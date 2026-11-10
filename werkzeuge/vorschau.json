@@ -1,0 +1,11 @@
+{ "basis": "https://kaffeeundkommiss.github.io/stahlgewitter/", "ordner": "vorschau", "site_name": "Erster Weltkrieg",
+  "seiten": [
+    { "datei": "index.html", "bild": "karte", "kicker": "Westfront · 1914–1918", "titel": "Ernst Jünger im Ersten Weltkrieg", "unter": "Animierte Karte von Jüngers Stationen, Verwundungen und Auszeichnungen, je Schritt mit Quellen." },
+    { "datei": "verwundungen.html", "bild": "verwundungen", "kicker": "1915 – 1918", "titel": "Jüngers Verwundungen und Auszeichnungen" },
+    { "datei": "fassungen.html", "bild": "fassungen", "kicker": "Quellenkritik", "titel": "Kriegstagebuch und „In Stahlgewittern“" },
+    { "datei": "glossar.html", "bild": "glossar", "kicker": "Glossar", "titel": "Begriffe zu Jüngers Kriegsdienst" },
+    { "datei": "quellen-karte.html", "bild": "quellen-karte", "kicker": "Quellen", "titel": "Quellen zur Karte" },
+    { "datei": "quellen-verwundungen.html", "bild": "quellen-verwundungen", "kicker": "Quellen", "titel": "Quellen zu Verwundungen und Auszeichnungen" },
+    { "datei": "quellen-fassungen.html", "bild": "quellen-fassungen", "kicker": "Quellen", "titel": "Quellen zu Tagebuch und Buch" },
+    { "datei": "quellen-glossar.html", "bild": "quellen-glossar", "kicker": "Quellen", "titel": "Quellen zum Glossar" }
+  ] }
