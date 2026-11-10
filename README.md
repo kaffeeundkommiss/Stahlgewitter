@@ -4,7 +4,7 @@ Animierte Karte von Ernst Jüngers Weg an der Westfront, vom Kriegseintritt im A
 Verwundung im August 1918, mit Belegstand und Quellen je Schritt. Aufbau und Design wie das Repo
 `erster-Weltkrieg` (Jagdgeschwader Richthofen).
 
-Online: https://kaffeeundkommiss.github.io/stahlgewitter/
+Online: https://kaffeeundkommiss.github.io/Stahlgewitter/
 
 ## Aufbau
 

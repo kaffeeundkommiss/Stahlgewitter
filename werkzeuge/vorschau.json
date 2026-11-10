@@ -1,4 +1,4 @@
-{ "basis": "https://kaffeeundkommiss.github.io/stahlgewitter/", "ordner": "vorschau", "site_name": "Erster Weltkrieg",
+{ "basis": "https://kaffeeundkommiss.github.io/Stahlgewitter/", "ordner": "vorschau", "site_name": "Erster Weltkrieg",
   "seiten": [
     { "datei": "index.html", "bild": "karte", "kicker": "Westfront · 1914–1918", "titel": "Ernst Jünger im Ersten Weltkrieg", "unter": "Animierte Karte von Jüngers Stationen, Verwundungen und Auszeichnungen, je Schritt mit Quellen." },
     { "datei": "verwundungen.html", "bild": "verwundungen", "kicker": "1915 – 1918", "titel": "Jüngers Verwundungen und Auszeichnungen" },
