@@ -12,6 +12,7 @@ Online: https://kaffeeundkommiss.github.io/Stahlgewitter/
   stammen aus der Karte im Repo `erster-Weltkrieg`. Jüngers Stationen stehen im Skript als `STEPS`, die Koordinaten in `MAP.pts`.
 - `verwundungen.html` – die sieben Verwundungen, Beförderungen und Auszeichnungen mit Belegstatus.
 - `fassungen.html` – Kriegstagebuch und „In Stahlgewittern“: Fassungen 1920–1978, Deutungen, Folgen für die Belege.
+- `sturmtruppen.html` – Entwicklung der Stoßtrupps und Sturmbataillone 1915–1918 und Jüngers Rolle darin (auch in der Reichswehr), mit Zitaten und Foto (Bundesarchiv, CC BY-SA 3.0 DE, `bilder/sturmtrupp-flandern.jpg`).
 - `glossar.html` – Fachbegriffe; die Einträge stehen in `site.js`.
 - `quellen-*.html` – je Seite ein Quellenverzeichnis; die Quellen der Karte stehen in `quellen-karte.js`.
 - `site.js`, `site.css`, `basis.css`, `bereich.css` – gemeinsame Bausteine wie im Repo `erster-Weltkrieg`.
