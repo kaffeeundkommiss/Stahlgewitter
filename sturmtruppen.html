@@ -162,6 +162,37 @@ header { grid-template-columns: minmax(0, 1fr) }
 figure.bild img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 2px; background: var(--panel) }
 figure.bild figcaption { font-size: 13px; line-height: 1.4; color: var(--muted) }
 figure.bild figcaption a { color: var(--ink) }
+/* Sturmtruppen: 3D-Modell Gewehr 98 rechts neben dem Einleitungstext (Muster wie Mark II und Fokker Dr.I) */
+.g98-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: start }
+@media (min-width: 821px) { .g98-row { grid-template-columns: minmax(0, 1fr) 340px } }
+.g98 { margin: 0; display: grid; gap: 8px; min-width: 0; --g98-bg: #e4e7e0; --g98-ground: #d3d8cf; --g98-ring: #b9c0b6; --g98-dark: 0 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .g98 { --g98-bg: #141815; --g98-ground: #1f2521; --g98-ring: #343d37; --g98-dark: 1 } }
+:root[data-theme="dark"] .g98 { --g98-bg: #141815; --g98-ground: #1f2521; --g98-ring: #343d37; --g98-dark: 1 }
+.g98-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px }
+.g98-head h3 { font: 700 20px/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; margin: 0 }
+.g98-head span { font: 600 12px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--red) }
+.g98-stage { position: relative; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--g98-bg) }
+.g98 canvas { display: block; width: 100%; height: 230px; touch-action: pan-y; cursor: grab }
+.g98 canvas.grab { cursor: grabbing }
+.g98-lbl { position: absolute; left: 0; top: 0; opacity: 0; pointer-events: none; padding: 3px 7px; border-radius: 2px; background: var(--panel); border: 1px solid var(--rule); font: 600 12px/1.2 var(--f-display); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; color: var(--ink) }
+.g98-zoom { position: absolute; right: 6px; top: 6px; display: grid; gap: 4px }
+.g98-msg { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; margin: 0; text-align: center; font-size: 14px; color: var(--muted) }
+.g98-grp { display: grid; gap: 4px }
+.g98-grp > span { font: 600 12px/1 var(--f-display); letter-spacing: .1em; text-transform: uppercase; color: var(--muted) }
+.g98-btns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px }
+.g98-btns button, .g98-zoom button { font: 600 13px/1.1 var(--f-display); letter-spacing: .03em; hyphens: manual; text-transform: uppercase; color: var(--ink); background: var(--paper);
+  border: 1px solid var(--border); border-radius: 2px; min-height: 36px; padding: 6px 4px; cursor: pointer }
+.g98-btns button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink) }
+.g98-btns button:focus-visible, .g98-zoom button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px }
+.g98-zoom button { width: 34px; min-height: 34px; padding: 0; font-size: 18px; background: var(--panel) }
+.g98 figcaption { font-size: 14px; line-height: 1.45; display: grid; gap: 6px }
+.g98 figcaption p { margin: 0 }
+.g98 dl { margin: 0 0 6px; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 13px }
+.g98 dt { color: var(--muted) } .g98 dd { margin: 0 }
+.g98 .hint { font-size: 12px; color: var(--muted) } .g98 a { color: var(--ink); font-weight: 600 }
+.g98-daten > summary { cursor: pointer; font: 600 13px/1.2 var(--f-display); letter-spacing: .08em; text-transform: uppercase; padding: 4px 0 }
+.g98-daten[open] > summary { margin-bottom: 4px }
+@media (max-width: 820px) { .g98 canvas { height: 240px } }
 </style>
 <link rel="stylesheet" href="bereich.css">
 </head>
@@ -191,7 +222,59 @@ figure.bild figcaption a { color: var(--ink) }
       <div class="eyebrow">1915 – 1923</div>
       <h2 class="evtitle">Stoßtrupps und Sturmtruppen</h2>
     </div>
-    <p class="lede">Um den Stellungskrieg aufzubrechen, entwickelte das deutsche Heer ab 1915 ein neues Angriffsverfahren: kleine, schwer bewaffnete Trupps statt breiter Schützenlinien. Aus einer Versuchseinheit wurden Sturmbataillone, aus deren Lehrgängen ein Verfahren für die ganze Infanterie. Jünger war kein Angehöriger eines Sturmbataillons, sondern Stoßtruppführer in einem Infanterieregiment. Nach dem Krieg warb er für den Stoßtruppkämpfer als Leitbild und arbeitete an der Infanterievorschrift der Reichswehr mit.</p>
+    <div class="g98-row">
+      <p class="lede">Um den Stellungskrieg aufzubrechen, entwickelte das deutsche Heer ab 1915 ein neues Angriffsverfahren: kleine, schwer bewaffnete Trupps statt breiter Schützenlinien. Aus einer Versuchseinheit wurden Sturmbataillone, aus deren Lehrgängen ein Verfahren für die ganze Infanterie. Jünger war kein Angehöriger eines Sturmbataillons, sondern Stoßtruppführer in einem Infanterieregiment. Nach dem Krieg warb er für den Stoßtruppkämpfer als Leitbild und arbeitete an der Infanterievorschrift der Reichswehr mit.</p>
+    <figure class="g98" id="g98" aria-labelledby="g98-titel">
+      <div class="g98-head"><h3 id="g98-titel">Gewehr 98</h3><span>3D-Modell</span></div>
+      <div class="g98-stage">
+        <canvas role="img" aria-label="Drehbares 3D-Modell des deutschen Infanteriegewehrs 98"></canvas>
+        <div class="g98-lbl" data-label="kimme" aria-hidden="true">Kimme · Lange-Visier</div>
+        <div class="g98-lbl" data-label="korn" aria-hidden="true">Korn</div>
+        <div class="g98-zoom"><button type="button" data-zoom="in" aria-label="Heranzoomen">+</button><button type="button" data-zoom="out" aria-label="Herauszoomen">−</button></div>
+        <p class="g98-msg" hidden></p>
+      </div>
+      <div class="g98-btns" role="group" aria-label="Ansicht">
+        <button type="button" data-view="drei" aria-pressed="false">Schräg</button>
+        <button type="button" data-view="seite" aria-pressed="false">Seite</button>
+        <button type="button" data-view="oben" aria-pressed="false">Oben</button>
+        <button type="button" data-view="unten" aria-pressed="false">Unten</button>
+        <button type="button" data-view="muendung" aria-pressed="false">Mündung</button>
+        <button type="button" data-view="verschluss" aria-pressed="false">Verschluss</button>
+      </div>
+      <div class="g98-btns" role="group" aria-label="Bauteile und Bewegung">
+        <button type="button" data-toggle="sight" aria-pressed="false">Visier</button>
+        <button type="button" data-toggle="bayo" aria-pressed="false">Seiten&shy;gewehr</button>
+        <button type="button" data-toggle="spin" aria-pressed="true">Drehen</button>
+      </div>
+      <div class="g98-grp"><span id="g98-vis">Visierstellung (schematisch)</span>
+      <div class="g98-btns" role="group" aria-labelledby="g98-vis">
+        <button type="button" data-range="400" aria-pressed="true">400 m</button>
+        <button type="button" data-range="1000" aria-pressed="false">1.000 m</button>
+        <button type="button" data-range="2000" aria-pressed="false">2.000 m</button>
+      </div></div>
+      <figcaption>
+        <p>Das Gewehr 98 wurde 1898 eingeführt und war das Standardgewehr der deutschen Infanterie. Sturmtruppen erhielten statt seiner überwiegend den kürzeren, leichteren Karabiner 98a.</p>
+        <div class="meta"><span class="b ok">belegt</span>Einführung 1898: <a href="quellen-sturmtruppen.html#q-g98de">S15</a><a href="quellen-sturmtruppen.html#q-g98en">S16</a><a href="quellen-sturmtruppen.html#q-g98mf">S17</a></div>
+        <div class="meta"><span class="b part">teilweise</span>Karabiner 98a: <a href="quellen-sturmtruppen.html#q-wenst">S5</a><a href="quellen-sturmtruppen.html#q-g98en">S16</a><a href="quellen-sturmtruppen.html#q-g98de">S15</a></div>
+        <p class="why">Zum Karabiner nur Wikipedia (en und de). Welche Waffe Jünger trug, ist hier nicht belegt.</p>
+        <details class="g98-daten"><summary>Technische Daten</summary>
+        <dl>
+          <dt>Verschluss</dt><dd>Mauser-Kammerverschluss, gerader Kammerstängel</dd>
+          <dt>Länge</dt><dd>1.250 mm</dd>
+          <dt>Lauflänge</dt><dd>740 mm</dd>
+          <dt>Gewicht</dt><dd>4,09 kg (Magazin leer)</dd>
+          <dt>Kaliber</dt><dd>7,92 × 57 mm</dd>
+          <dt>Magazin</dt><dd>5 Patronen</dd>
+          <dt>Visier</dt><dd>Lange-Visier, 400 bis 2.000 m</dd>
+          <dt>Seitengewehr</dt><dd>S 98, später S 98/05</dd>
+        </dl>
+        <div class="meta"><span class="b ok">belegt</span><a href="quellen-sturmtruppen.html#q-g98de">S15</a><a href="quellen-sturmtruppen.html#q-g98en">S16</a><a href="quellen-sturmtruppen.html#q-g98mf">S17</a><a href="quellen-sturmtruppen.html#q-g98db">S18</a></div>
+        <p class="why">Länge: Wikipedia (de) nennt 1.240 mm, die übrigen Quellen 1.250 mm. Nicht übernommen: der Beiname „Achterbahn“ für das Visier, dafür fand sich kein Beleg.</p>
+        </details>
+        <p class="hint">Ziehen dreht das Modell. Vereinfachte Nachbildung: Form, Seitengewehr und Visierstellungen sind angenähert. Belege auf der <a href="quellen-sturmtruppen.html#q-g98de">Quellenseite</a>.</p>
+      </figcaption>
+    </figure>
+    </div>
     <figure class="bild">
       <img src="bilder/sturmtrupp-flandern.jpg" width="800" height="526" alt="Schwarz-Weiß-Foto: deutsche Soldaten mit Stahlhelm liegen mit Gewehren an der Böschung eines Grabens, ein weiterer steht unten im Graben auf einem Laufrost; dahinter offenes Gelände" decoding="async">
       <figcaption>Deutscher Sturmtrupp in Flandern, zwischen 1916 und 1918. Fotograf unbekannt. Bundesarchiv, Bild 146-2008-0086 / CC-BY-SA 3.0. <a href="quellen-sturmtruppen.html#f1">Bildnachweis</a></figcaption>
@@ -485,6 +568,8 @@ figure.bild figcaption a { color: var(--ink) }
   <p class="qnav"><a class="qbtn" href="quellen-sturmtruppen.html">Quellen</a></p>
 </div>
 <script src="site.js" defer></script>
+<script src="modell/vendor/three-0.159.0.min.js" defer></script>
+<script src="modell/g98.js" defer></script>
 <footer class="kk-fuss"><div class="kk-in">
   <p><a href="https://kaffeeundkommiss.github.io/">Kaffee und Kommiss</a>: Politik, Geschichte und Sicherheitspolitik mit Quellen. Private, nichtkommerzielle Zusammenstellung. Fehler gefunden? Bitte mit Quelle melden.</p>
 </div></footer>
