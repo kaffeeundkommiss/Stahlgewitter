@@ -66,10 +66,10 @@ header { display: grid; gap: 10px }
 .logo-plane { fill: var(--red) }
 .logo-text { fill: var(--ink); font: 700 12.5px var(--f-display); letter-spacing: .16em }
 .eyebrow { font: 600 13px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--red) }
-h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
+h1, .h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
 .lede { margin: 0; max-width: 68ch; color: var(--muted) }
 .evhead { display: grid; gap: 6px; margin-top: 8px }
-.evhead h2.evtitle { font: 700 clamp(26px, 4vw, 36px)/1.05 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance }
+.evhead .evtitle { font: 700 clamp(26px, 4vw, 36px)/1.05 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance }
 nav.pages { display: flex; gap: 8px; flex-wrap: wrap }
 nav.pages a { font: 600 14px/1 var(--f-display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none;
   border: 1px solid var(--border); border-radius: 2px; padding: 9px 12px 8px; background: var(--panel) }
@@ -95,7 +95,7 @@ h2 { font: 700 20px/1 var(--f-display); text-transform: uppercase; letter-spacin
 .status li { display: inline-flex; align-items: center; gap: 7px }
 .b { display: inline-block; font: 600 11.5px/1 var(--f-display); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px 3px; border-radius: 2px; border: 1px solid; white-space: nowrap }
 .b.ok { color: var(--j6); border-color: var(--j6) }
-.b.part { color: var(--j10); border-color: var(--j10) }
+.b.part { color: color-mix(in srgb, var(--j10) 70%, var(--ink)); border-color: var(--j10) }
 .b.one { color: var(--muted); border-color: var(--border); border-style: dashed }
 .b.wid { color: var(--panel); background: var(--red); border-color: var(--red) }
 .day { margin: 6px 0 0; font: 600 14px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
@@ -164,12 +164,12 @@ ol.srcs li:target { background: var(--red-soft); outline: 6px solid var(--red-so
 <div class="kk-kopf"><div class="kk-in">
   <a class="kk-schild" href="index.html"><img src="icons/favicon.svg" alt="" width="44" height="44"><span><span class="kk-name" style="display:block">Erster Weltkrieg</span><span class="kk-unter" style="display:block">Ernst Jünger an der Westfront 1914–1918</span></span></a>
 </div></div>
-<div class="wrap">
+<main class="wrap" id="inhalt">
   <header>
     <div class="brand">
       <div class="brand-text">
         <div class="eyebrow">Westfront · Dezember 1914 – August 1918</div>
-        <h1>Ernst Jünger im Ersten Weltkrieg</h1>
+        <p class="h1">Ernst Jünger im Ersten Weltkrieg</p>
       </div>
     </div>
     <nav class="pages" aria-label="Seiten">
@@ -180,7 +180,7 @@ ol.srcs li:target { background: var(--red-soft); outline: 6px solid var(--red-so
     </nav>
     <div class="evhead">
       <div class="eyebrow">Quellenkritik</div>
-      <h2 class="evtitle">Kriegstagebuch und „In Stahlgewittern“</h2>
+      <h1 class="evtitle">Kriegstagebuch und „In Stahlgewittern“</h1>
     </div>
     <p class="lede">Fast alles, was über Jüngers Weg im Krieg bekannt ist, stammt von ihm selbst: aus seinem Tagebuch und aus dem Buch, das er daraus machte und über Jahrzehnte immer wieder umschrieb. Diese Seite zeigt die Textschichten und was sie für die Angaben auf der Karte bedeuten.</p>
   </header>
@@ -311,7 +311,7 @@ ol.srcs li:target { background: var(--red-soft); outline: 6px solid var(--red-so
     <p class="note">Jüngers Texte sind urheberrechtlich geschützt. Diese Seiten zitieren sie nicht, sondern geben Inhalte mit eigenen Worten wieder.</p>
   </section>
   <p class="qnav"><a class="qbtn" href="quellen-fassungen.html">Quellen</a></p>
-</div>
+</main>
 <script src="site.js" defer></script>
 <footer class="kk-fuss"><div class="kk-in">
   <p><a href="https://kaffeeundkommiss.github.io/">Kaffee und Kommiss</a>: Politik, Geschichte und Sicherheitspolitik mit Quellen. Private, nichtkommerzielle Zusammenstellung. Fehler gefunden? Bitte mit Quelle melden.</p>

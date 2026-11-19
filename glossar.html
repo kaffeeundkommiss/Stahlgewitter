@@ -66,7 +66,7 @@ header { display: grid; gap: 10px }
 .logo-plane { fill: var(--red) }
 .logo-text { fill: var(--ink); font: 700 12.5px var(--f-display); letter-spacing: .16em }
 .eyebrow { font: 600 13px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--red) }
-h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
+h1, .h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
 .lede { margin: 0; max-width: 68ch; color: var(--muted) }
 nav.pages { display: flex; gap: 8px; flex-wrap: wrap }
 nav.pages a { font: 600 14px/1 var(--f-display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none;
@@ -105,12 +105,12 @@ ol.gsrcs { margin: 0; padding-left: 2.4em; display: grid; gap: 4px; font-size: 1
 <div class="kk-kopf"><div class="kk-in">
   <a class="kk-schild" href="index.html"><img src="icons/favicon.svg" alt="" width="44" height="44"><span><span class="kk-name" style="display:block">Erster Weltkrieg</span><span class="kk-unter" style="display:block">Ernst Jünger an der Westfront 1914–1918</span></span></a>
 </div></div>
-<div class="wrap">
+<main class="wrap" id="inhalt">
   <header>
     <div class="brand">
       <div class="brand-text">
-        <div class="eyebrow">Westfront · Dezember 1914 – August 1918</div>
-        <h1>Ernst Jünger im Ersten Weltkrieg</h1>
+        <div class="eyebrow">Begriffe und Abkürzungen</div>
+        <h1>Glossar</h1>
       </div>
     </div>
     <nav class="pages" aria-label="Seiten">
@@ -128,7 +128,7 @@ ol.gsrcs { margin: 0; padding-left: 2.4em; display: grid; gap: 4px; font-size: 1
   </section>
 
   <p class="qnav"><a class="qbtn" href="quellen-glossar.html">Quellen</a></p>
-</div>
+</main>
 <script src="site.js"></script>
 <script>
 (() => {

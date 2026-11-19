@@ -62,7 +62,7 @@ try {
 } catch (e) { RX = null; } // sehr alte Browser ohne Lookbehind: keine Markierung, Seite bleibt lesbar
 
 // Bereiche, in denen nichts markiert wird
-const SKIP = "script,style,svg,a,button,select,label,summary,h1,h2,h3,nav,.b,.chip,.uchip,.bel,.legend,.count,.t,.day,.eyebrow,.ruler,.nowdate,ol.srcs,ol.srclist,.sources,.src,.glpop,.glnone,thead,.dates,.num";
+const SKIP = "script,style,svg,a,button,select,label,summary,h1,.h1,h2,h3,nav,.b,.chip,.uchip,.bel,.legend,.count,.t,.day,.eyebrow,.ruler,.nowdate,ol.srcs,ol.srclist,.sources,.src,.glpop,.glnone,thead,.dates,.num";
 
 function markIn(root, used, excl) {
   if (!RX || !root) return;
