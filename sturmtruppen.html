@@ -66,10 +66,10 @@ header { display: grid; gap: 10px }
 .logo-plane { fill: var(--red) }
 .logo-text { fill: var(--ink); font: 700 12.5px var(--f-display); letter-spacing: .16em }
 .eyebrow { font: 600 13px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--red) }
-h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
+h1, .h1 { font: 700 clamp(28px, 5vw, 46px)/1 var(--f-display); margin: 0; text-transform: uppercase; text-wrap: balance }
 .lede { margin: 0; max-width: 68ch; color: var(--muted) }
 .evhead { display: grid; gap: 6px; margin-top: 8px }
-.evhead h2.evtitle { font: 700 clamp(26px, 4vw, 36px)/1.05 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance }
+.evhead .evtitle { font: 700 clamp(26px, 4vw, 36px)/1.05 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance }
 nav.pages { display: flex; gap: 8px; flex-wrap: wrap }
 nav.pages a { font: 600 14px/1 var(--f-display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none;
   border: 1px solid var(--border); border-radius: 2px; padding: 9px 12px 8px; background: var(--panel) }
@@ -95,7 +95,7 @@ h2 { font: 700 20px/1 var(--f-display); text-transform: uppercase; letter-spacin
 .status li { display: inline-flex; align-items: center; gap: 7px }
 .b { display: inline-block; font: 600 11.5px/1 var(--f-display); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px 3px; border-radius: 2px; border: 1px solid; white-space: nowrap }
 .b.ok { color: var(--j6); border-color: var(--j6) }
-.b.part { color: var(--j10); border-color: var(--j10) }
+.b.part { color: color-mix(in srgb, var(--j10) 70%, var(--ink)); border-color: var(--j10) }
 .b.one { color: var(--muted); border-color: var(--border); border-style: dashed }
 .b.wid { color: var(--panel); background: var(--red); border-color: var(--red) }
 .day { margin: 6px 0 0; font: 600 14px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
@@ -169,7 +169,7 @@ figure.bild figcaption a { color: var(--ink) }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .g98 { --g98-bg: #141815; --g98-ground: #1f2521; --g98-ring: #343d37; --g98-dark: 1 } }
 :root[data-theme="dark"] .g98 { --g98-bg: #141815; --g98-ground: #1f2521; --g98-ring: #343d37; --g98-dark: 1 }
 .g98-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px }
-.g98-head h3 { font: 700 20px/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; margin: 0 }
+.g98-head h2 { font: 700 20px/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; margin: 0 }
 .g98-head span { font: 600 12px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--red) }
 .g98-stage { position: relative; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--g98-bg) }
 .g98 canvas { display: block; width: 100%; height: 230px; touch-action: pan-y; cursor: grab }
@@ -205,12 +205,12 @@ figure.bild figcaption a { color: var(--ink) }
 <div class="kk-kopf"><div class="kk-in">
   <a class="kk-schild" href="index.html"><img src="icons/favicon.svg" alt="" width="44" height="44"><span><span class="kk-name" style="display:block">Erster Weltkrieg</span><span class="kk-unter" style="display:block">Ernst Jünger an der Westfront 1914–1918</span></span></a>
 </div></div>
-<div class="wrap">
+<main class="wrap" id="inhalt">
   <header>
     <div class="brand">
       <div class="brand-text">
         <div class="eyebrow">Westfront · Dezember 1914 – August 1918</div>
-        <h1>Ernst Jünger im Ersten Weltkrieg</h1>
+        <p class="h1">Ernst Jünger im Ersten Weltkrieg</p>
       </div>
     </div>
     <nav class="pages" aria-label="Seiten">
@@ -221,12 +221,12 @@ figure.bild figcaption a { color: var(--ink) }
     </nav>
     <div class="evhead">
       <div class="eyebrow">1915 – 1923</div>
-      <h2 class="evtitle">Stoßtrupps und Sturmtruppen</h2>
+      <h1 class="evtitle">Stoßtrupps und Sturmtruppen</h1>
     </div>
     <div class="g98-row">
       <p class="lede">Um den Stellungskrieg aufzubrechen, entwickelte das deutsche Heer ab 1915 ein neues Angriffsverfahren: kleine, schwer bewaffnete Trupps statt breiter Schützenlinien. Aus einer Versuchseinheit wurden Sturmbataillone, aus deren Lehrgängen ein Verfahren für die ganze Infanterie. Jünger war kein Angehöriger eines Sturmbataillons, sondern Stoßtruppführer in einem Infanterieregiment. Nach dem Krieg warb er für den Stoßtruppkämpfer als Leitbild und arbeitete an der Infanterievorschrift der Reichswehr mit.</p>
     <figure class="g98" id="g98" aria-labelledby="g98-titel">
-      <div class="g98-head"><h3 id="g98-titel">Gewehr 98</h3><span>3D-Modell</span></div>
+      <div class="g98-head"><h2 id="g98-titel">Gewehr 98</h2><span>3D-Modell</span></div>
       <div class="g98-stage">
         <canvas role="img" aria-label="Drehbares 3D-Modell des deutschen Infanteriegewehrs 98"></canvas>
         <div class="g98-lbl" data-label="kimme" aria-hidden="true">Kimme · Lange-Visier</div>
@@ -567,7 +567,7 @@ figure.bild figcaption a { color: var(--ink) }
     <p>Die Standardwerke von Gudmundsson (Stormtroop Tactics, 1989), Raths (Vom Massensturm zur Stoßtrupptaktik, 2009) und Gruss (Die deutschen Sturmbataillone im Weltkrieg, 1939) wurden nicht selbst eingesehen; ihre Inhalte stehen hier nur, soweit Lupfer, Birrel, Raths' Lexikonartikel und Wikipedia sie wiedergeben. Jüngers Stoßtruppunternehmen sind fast nur aus seinem eigenen Buch bekannt; ein Abgleich mit Kriegstagebuch und Regimentsgeschichte steht aus.</p>
   </section>
   <p class="qnav"><a class="qbtn" href="quellen-sturmtruppen.html">Quellen</a></p>
-</div>
+</main>
 <script src="site.js" defer></script>
 <script src="modell/vendor/three-0.159.0.min.js" defer></script>
 <script src="modell/g98.js" defer></script>
