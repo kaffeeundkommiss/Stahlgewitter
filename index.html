@@ -95,6 +95,8 @@ h1, .h1 { font: 700 clamp(30px, 5vw, 50px)/1 var(--f-display); letter-spacing: .
 .intro .tgl .op, .intro:not([open]) .tgl .cl { display: none } .intro:not([open]) .tgl .op { display: inline }
 .intro:not([open]) { padding-bottom: 14px }
 .intro p { margin: 0 } .intro .how { font-size: 15px; color: var(--muted) } .intro .how b { color: var(--ink); font-weight: 600 } .intro a { color: var(--ink); font-weight: 600 }
+.hinweise { border: 1px solid var(--rule); border-radius: 3px; padding: 14px 18px 16px; display: grid; gap: 8px; max-width: 860px }
+.hinweise p { margin: 0; font-size: 15px; color: var(--muted) } .hinweise b { color: var(--ink); font-weight: 600 } .hinweise a { color: var(--ink); font-weight: 600 }
 .side-label { font-family: var(--f-display); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; fill: var(--front); paint-order: stroke; stroke: var(--paper); stroke-linejoin: round; pointer-events: none; transition: opacity .3s }
 .side-ic { pointer-events: none; transition: opacity .3s; opacity: 0 }
 .legend-m { display: none }
@@ -332,9 +334,6 @@ ol.srclist a { color: var(--ink) } ol.srclist li:target { background: var(--red-
     <summary><h2>Worum geht es?</h2><span class="tgl" aria-hidden="true"><span class="op">Einblenden</span><span class="cl">Ausblenden</span></span></summary>
     <p>Ernst Jünger (1895–1998) meldete sich bei Kriegsbeginn 1914 als Freiwilliger und diente bis August 1918 als Infanterist an der Westfront, ab Ende 1915 als Leutnant im Füsilier-Regiment Nr. 73 aus Hannover. Er wurde sieben Mal so schwer verwundet, dass er die Front verlassen musste, und erhielt im September 1918 den Orden Pour le Mérite.</p>
     <p>Bekannt wurde er durch sein Buch „In Stahlgewittern“ (1920). Es beruht auf seinen Kriegstagebüchern, ist aber eine selbst verfasste und mehrfach überarbeitete Darstellung. Die Karte stützt sich deshalb, wo möglich, auf Sekundärquellen und weist aus, wenn eine Angabe nur aus Jüngers eigenem Text stammt. Mehr dazu auf der Seite <a href="fassungen.html">Tagebuch und Buch</a>.</p>
-    <p class="how"><b>So liest du die Karte:</b> „Abspielen“ startet den Ablauf, „Weiter“ und „Zurück“ gehen Schritt für Schritt. Die rote Linie zeigt Jüngers Weg; gestrichelt sind Wege in die Heimat, ins Lazarett oder zu Lehrgängen. Ein rotes ✕ markiert eine Verwundung, ◆ ein anderes Ereignis. Blass gezeichnet sind frühere Wege. Orte außerhalb des Westfront-Ausschnitts, etwa Hannover, zeigt ein Pfeil am Kartenrand. Gepunktet unterstrichene Begriffe lassen sich antippen; alle stehen im <a href="glossar.html">Glossar</a>.</p>
-    <p class="how"><b>Im Detail:</b> <a href="verwundungen.html">Verwundungen und Auszeichnungen</a> · <a href="fassungen.html">Kriegstagebuch und „In Stahlgewittern“</a></p>
-    <p class="how"><b>3D-Modell:</b> Das Gewehr 98 steht drehbar auf der Seite <a href="https://kaffeeundkommiss.github.io/geschichte/erster-weltkrieg/technik/">Technik im Modell</a>.</p>
   </details>
 
   <section class="stage">
@@ -422,6 +421,12 @@ ol.srclist a { color: var(--ink) } ol.srclist li:target { background: var(--red-
       </details>
     </section>
     <details class="legend-m" id="legendM"><summary>Legende</summary></details>
+  </section>
+
+  <section class="hinweise" aria-label="Hinweise zur Karte">
+    <p class="how"><b>So liest du die Karte:</b> „Abspielen“ startet den Ablauf, „Weiter“ und „Zurück“ gehen Schritt für Schritt. Die rote Linie zeigt Jüngers Weg; gestrichelt sind Wege in die Heimat, ins Lazarett oder zu Lehrgängen. Ein rotes ✕ markiert eine Verwundung, ◆ ein anderes Ereignis. Blass gezeichnet sind frühere Wege. Orte außerhalb des Westfront-Ausschnitts, etwa Hannover, zeigt ein Pfeil am Kartenrand. Gepunktet unterstrichene Begriffe lassen sich antippen; alle stehen im <a href="glossar.html">Glossar</a>.</p>
+    <p class="how"><b>Im Detail:</b> <a href="verwundungen.html">Verwundungen und Auszeichnungen</a> · <a href="fassungen.html">Kriegstagebuch und „In Stahlgewittern“</a></p>
+    <p class="how"><b>3D-Modell:</b> Das Gewehr 98 steht drehbar auf der Seite <a href="https://kaffeeundkommiss.github.io/geschichte/erster-weltkrieg/technik/">Technik im Modell</a>.</p>
   </section>
 
 
