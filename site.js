@@ -208,3 +208,24 @@ function init() {
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
+
+// Handy: Kasten „Worum geht es?“ auf den ersten Absatz kürzen, Rest per „Weiterlesen“.
+// Mehr Absätze zeigt data-kurz="2" am Kasten. Ohne JavaScript bleibt der volle Text sichtbar.
+(function () {
+function kurzEinstieg() {
+  const it = document.getElementById("intro");
+  if (!it || !window.matchMedia || !matchMedia("(max-width: 640px)").matches) return;
+  const ps = [...it.children].filter(e => e.tagName === "P");
+  const n = Math.max(1, +it.dataset.kurz || 1);
+  if (ps.length <= n) return;
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "mehr"; b.textContent = "Weiterlesen";
+  ps[n - 1].after(b);
+  it.classList.add("kurz");
+  b.addEventListener("click", () => {
+    it.classList.remove("kurz"); b.remove();
+    ps[n].setAttribute("tabindex", "-1"); ps[n].focus({ preventScroll: true });
+  });
+}
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", kurzEinstieg); else kurzEinstieg();
+})();
